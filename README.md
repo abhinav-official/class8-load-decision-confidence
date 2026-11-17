@@ -2,7 +2,7 @@
 
 A working prototype exploring one question in modern dispatch: **how confidently can a dispatcher act on a single load opportunity?**
 
-Live demo: https://abhinav-official.github.io/class8-load-decision-confidence/
+Live demo: https://class8-load-decision-confidence.pages.dev/
 
 Built by Abhinav Jha as a pitch piece alongside his application for the Senior Frontend Engineer role at Class8. It is an independent exploration based on Class8's public product descriptions. It is not affiliated with or endorsed by Class8, and it uses an illustrative dataset, not live market data.
 
