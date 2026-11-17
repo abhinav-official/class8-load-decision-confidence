@@ -223,6 +223,40 @@ export default function App() {
           posting data. A load can be attractive and unverified, or verified and unattractive.
           Nothing on this page combines the three into a single score.
         </p>
+        <p>
+          Confidence High means every key field is present and the posting is at most 12 hours
+          old. It describes the posting, not a verification: only a broker call verifies a field,
+          and each field in a load's confidence list names its own source.
+        </p>
+      </div>
+
+      <div className="panel">
+        <p>
+          <strong>Three things to see first.</strong>
+        </p>
+        <p>
+          1. Load 1 (Jackson, MS to Memphis, TN) has the best headline rate on the board, $5.71
+          per loaded mile, and ranks 10th of 11 rateable loads by contribution per total mile,
+          $0.76. The headline hides 390 deadhead miles.
+        </p>
+        <p>
+          2. Load 7 (Houston, TX to San Antonio, TX) contributes positively and still cannot be
+          taken: the truck arrives at pickup 140 minutes after the window closes. Its suggested
+          action is Skip.
+        </p>
+        <p>
+          3. Load 6 (Dallas, TX to Nashville, TN): press Simulate broker call. Confidence rises
+          to High while contribution falls from $862 to $742, because the call verifies the
+          details and corrects the rate. Verification and attractiveness move separately.
+        </p>
+        <p>
+          How the suggested action is decided, in order: Skip when feasibility is Does not fit.
+          Call first when the rate or a window is missing. Pursue, but confirm times on the call
+          when feasibility is At risk. Only as a repositioning move when contribution is
+          negative. Pursue otherwise. The action reads economics and feasibility only; confidence
+          never changes it. Confidence tells you how much of the decision rests on unverified
+          data before you act.
+        </p>
       </div>
 
       <h2>Assumptions (all editable)</h2>

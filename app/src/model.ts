@@ -443,11 +443,14 @@ export function feasibility(r: ResolvedLoad, sim: Simulation): Feasibility {
     `against a ${formatMinute(bindingClose)} close, ${Math.round(bindingSlack)} minutes of slack.`;
 
   if (sim.resets > 0) {
+    const tightestDetail =
+      `Tightest window: ${bindingName} window, estimated arrival ${formatMinute(bindingArrival)} ` +
+      `against a ${formatMinute(bindingClose)} close, ${Math.round(bindingSlack)} minutes of slack.`;
     return {
       state: "At risk",
       bindingText:
         `At risk: ${sim.resets === 1 ? "a 10 h reset placement decides" : `${sim.resets} 10 h resets decide`} ` +
-        `this plan. ${bindingDetail}`,
+        `this plan. ${tightestDetail}`,
     };
   }
   if (bindingSlack < 60) {
